@@ -46,6 +46,7 @@ format = 1
 tile_data = PoolIntArray( -327678, 0, 196611, -327677, 0, 327684, -327676, 0, 196612, -327675, 0, 196612, -327674, 0, 327684, -327673, 0, 327684, -327672, 0, 196613, -262142, 0, 262147, -262136, 0, 262147, -196606, 0, 262149, -196601, 0, 196611, -196600, 0, 327685, -131070, 0, 262149, -131065, 0, 262147, -65534, 0, 327683, -65533, 0, 327684, -65532, 0, 327684, -65531, 0, 196612, -65530, 0, 327684, -65529, 0, 393218, -65528, 0, 393219 )
 
 [node name="Kult" type="KinematicBody2D" parent="."]
+position = Vector2( -193, 184 )
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Kult"]
@@ -54,3 +55,8 @@ scale = Vector2( 2.36739, 2.93731 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kult"]
+
+[node name="Camera2D" type="Camera2D" parent="Kult"]
+position = Vector2( 448, -140 )
+current = true
+process_mode = 0
