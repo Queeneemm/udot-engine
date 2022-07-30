@@ -50,7 +50,7 @@ tile_data = PoolIntArray( -327678, 0, 196611, -327677, 0, 327684, -327676, 0, 19
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Kult"]
-position = Vector2( 411, -132 )
+position = Vector2( 430, -133 )
 scale = Vector2( 2.36739, 2.93731 )
 frames = SubResource( 1 )
 
