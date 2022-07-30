@@ -1,5 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://Golem.png" type="Texture" id=1]
 [ext_resource path="res://Тайл.png" type="Texture" id=2]
 [ext_resource path="res://Kult.gd" type="Script" id=3]
 
@@ -28,11 +29,9 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="StreamTexture" id=3]
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ SubResource( 3 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
