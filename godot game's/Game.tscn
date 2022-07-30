@@ -3,17 +3,6 @@
 [ext_resource path="res://Тайл.png" type="Texture" id=2]
 [ext_resource path="res://Kult.gd" type="Script" id=3]
 
-[sub_resource type="StreamTexture" id=3]
-load_path = "res://.import/Golem.png-98a6e72cc511434c4af16d9bc6eccda2.stex"
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ SubResource( 3 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
 [sub_resource type="TileSet" id=2]
 0/name = "Тайл.png 0"
 0/texture = ExtResource( 2 )
@@ -39,7 +28,23 @@ animations = [ {
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="StreamTexture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Game" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -327678, 0, 196611, -327677, 0, 327684, -327676, 0, 196612, -327675, 0, 196612, -327674, 0, 327684, -327673, 0, 327684, -327672, 0, 196613, -262142, 0, 262147, -262136, 0, 262147, -196606, 0, 262149, -196601, 0, 196611, -196600, 0, 327685, -131070, 0, 262149, -131065, 0, 262147, -65534, 0, 327683, -65533, 0, 327684, -65532, 0, 327684, -65531, 0, 196612, -65530, 0, 327684, -65529, 0, 393218, -65528, 0, 393219 )
 
 [node name="Kult" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
@@ -49,8 +54,4 @@ position = Vector2( 411, -132 )
 scale = Vector2( 2.36739, 2.93731 )
 frames = SubResource( 1 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( -327678, 0, 196611, -327677, 0, 327684, -327676, 0, 196612, -327675, 0, 196612, -327674, 0, 327684, -327673, 0, 327684, -327672, 0, 196613, -262142, 0, 262147, -262136, 0, 262147, -196606, 0, 262149, -196601, 0, 196611, -196600, 0, 327685, -131070, 0, 262149, -131065, 0, 262147, -65534, 0, 327683, -65533, 0, 327684, -65532, 0, 327684, -65531, 0, 196612, -65530, 0, 327684, -65529, 0, 393218, -65528, 0, 393219 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kult"]
