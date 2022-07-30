@@ -1,3 +1,10 @@
 [gd_scene format=2]
 
 [node name="Game" type="Node"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
