@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kult_2_Proj.png-a1f8c92805f413d5e7390988f11979fd.stex"
+path="res://.import/Kult_2_RAttack.png-d35d44f647326c6826fc577f1aca5bbd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char/Kult_2_Proj.png"
-dest_files=[ "res://.import/Kult_2_Proj.png-a1f8c92805f413d5e7390988f11979fd.stex" ]
+source_file="res://Char/Kult/Kult_2_RAttack.png"
+dest_files=[ "res://.import/Kult_2_RAttack.png-d35d44f647326c6826fc577f1aca5bbd.stex" ]
 
 [params]
 
