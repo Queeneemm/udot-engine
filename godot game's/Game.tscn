@@ -599,5 +599,6 @@ frames = SubResource( 37 )
 position = Vector2( 0, 1 )
 
 [node name="DobyAngry" parent="." instance=ExtResource( 11 )]
-position = Vector2( 805, 52 )
+position = Vector2( 814, 48 )
+rotation = 0.0119698
 script = null
