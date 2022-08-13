@@ -395,7 +395,7 @@ outlines = [ PoolVector2Array( 64, 96, 64, 280, 95, 280, 96, 312, 127, 313, 128,
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 17.5, 7.5 )
+extents = Vector2( 10.5, 7.5 )
 
 [sub_resource type="AtlasTexture" id=96]
 atlas = ExtResource( 9 )
@@ -567,13 +567,13 @@ script = ExtResource( 1 )
 speed = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boby"]
-position = Vector2( -7.5, 94.5 )
+position = Vector2( -2.5, 93 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boby"]
 position = Vector2( 0, 47 )
 frames = SubResource( 5 )
-speed_scale = 1.762
+speed_scale = 1.327
 playing = true
 
 [node name="Gun" type="Node2D" parent="Boby"]
