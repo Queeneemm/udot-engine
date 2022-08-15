@@ -571,17 +571,17 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="SpriteFrames" id=37]
+[sub_resource type="SpriteFrames" id=124]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=124]
+[sub_resource type="SpriteFrames" id=37]
 animations = [ {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -651,34 +651,37 @@ frames = SubResource( 5 )
 speed_scale = 1.327
 playing = true
 
-[node name="Gun" type="Node2D" parent="Boby"]
-position = Vector2( 3, 58 )
-script = ExtResource( 6 )
+[node name="Weapons" type="Node2D" parent="Boby"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Gun"]
-position = Vector2( 12.8196, -1.83043 )
-scale = Vector2( 0.507518, 0.465399 )
-frames = SubResource( 37 )
-
-[node name="BulletPoint" type="Node2D" parent="Boby/Gun"]
-position = Vector2( 2, 1 )
-
-[node name="Bullet" parent="Boby/Gun" instance=ExtResource( 15 )]
-
-[node name="Gun2" type="Node2D" parent="Boby"]
+[node name="Gun2" type="Node2D" parent="Boby/Weapons"]
 position = Vector2( 3, 58 )
 script = ExtResource( 16 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Gun2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Weapons/Gun2"]
 position = Vector2( 15, 0 )
 scale = Vector2( 0.0245002, 0.0228636 )
 frames = SubResource( 124 )
 
-[node name="BulletPoint" type="Node2D" parent="Boby/Gun2"]
+[node name="BulletPoint" type="Node2D" parent="Boby/Weapons/Gun2"]
 position = Vector2( 1, 0 )
 
-[node name="Bullet2" parent="Boby/Gun2" instance=ExtResource( 14 )]
+[node name="Bullet2" parent="Boby/Weapons/Gun2" instance=ExtResource( 14 )]
 position = Vector2( 2803, 402 )
+
+[node name="Gun" type="Node2D" parent="Boby/Weapons"]
+position = Vector2( 3, 58 )
+script = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Weapons/Gun"]
+position = Vector2( 12.8196, -1.83043 )
+scale = Vector2( 0.507518, 0.465399 )
+frames = SubResource( 37 )
+
+[node name="BulletPoint" type="Node2D" parent="Boby/Weapons/Gun"]
+position = Vector2( 2, 1 )
+
+[node name="Bullet" parent="Boby/Weapons/Gun" instance=ExtResource( 15 )]
+position = Vector2( -428, -63 )
 
 [node name="Enemies" type="Node" parent="."]
 

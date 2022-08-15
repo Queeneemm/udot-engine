@@ -12,3 +12,4 @@ func _physics_process(delta):
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		)).normalized()
 	move_and_slide(direction * speed)
+
