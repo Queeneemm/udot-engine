@@ -9,7 +9,8 @@ var nav = null
 func _ready():
 	yield(owner, "ready")
 	nav = owner.nav
-
+	$AnimatedSprite.play()
+	
 func _physics_process(delta):
 	if path.size() > 0:
 		move_to_target()
