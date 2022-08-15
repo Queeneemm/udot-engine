@@ -1,32 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Char/Fire/Fire.png" type="Texture" id=1]
+[ext_resource path="res://99044971.jpg" type="Texture" id=1]
 [ext_resource path="res://DobyAngry.gd" type="Script" id=2]
-[ext_resource path="res://Char/Fire/Fire_Anim.png" type="Texture" id=3]
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 44, 48 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 3 )
-region = Rect2( 44, 0, 44, 48 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 3 )
-region = Rect2( 88, 0, 44, 48 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 3 )
-region = Rect2( 132, 0, 44, 48 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
@@ -34,17 +12,15 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 28.625, 37.5 )
+extents = Vector2( 61.5, 76 )
 
 [node name="DobyAngry" type="KinematicBody2D" groups=["Enemy"]]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 53.5705, 134.304 )
-scale = Vector2( 1.70775, 1.68713 )
+position = Vector2( 59.5, 137 )
+scale = Vector2( 0.258696, 0.330435 )
 frames = SubResource( 1 )
-animation = "Walk"
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
