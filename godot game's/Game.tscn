@@ -686,7 +686,7 @@ position = Vector2( -428, -63 )
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy1" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 716, 92 )
+position = Vector2( 716, 94 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
