@@ -4,9 +4,6 @@
 [ext_resource path="res://Enemy1.gd" type="Script" id=2]
 [ext_resource path="res://Char/Fire/Firepart.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 10.4688, 10.5 )
-
 [sub_resource type="Curve" id=9]
 min_value = -360.0
 max_value = 360.0
@@ -45,16 +42,15 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 
+[sub_resource type="CircleShape2D" id=10]
+
 [node name="Enemy1" type="KinematicBody2D" groups=["Enemy"]]
 position = Vector2( 7, -1 )
 script = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 105.531, 57.5 )
-shape = SubResource( 6 )
+speed = 372
 
 [node name="Particles2D" type="CPUParticles2D" parent="."]
-position = Vector2( 106, 58 )
+position = Vector2( 1, 17 )
 amount = 25
 lifetime = 5.0
 speed_scale = 0.5
@@ -67,7 +63,7 @@ angle = 45.0
 angle_curve = SubResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 108, 54 )
+position = Vector2( 2, 12 )
 texture = ExtResource( 1 )
 hframes = 5
 
@@ -75,3 +71,7 @@ hframes = 5
 autoplay = "Walk"
 anims/RESET = SubResource( 7 )
 anims/Walk = SubResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 17 )
+shape = SubResource( 10 )

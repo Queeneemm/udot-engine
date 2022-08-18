@@ -9,7 +9,7 @@ var nav = null
 func _ready():
 	yield(owner, "ready")
 	nav = owner.nav
-	$AnimatedSprite.play()
+	$AnimationPlayer.play()
 	
 func _physics_process(delta):
 	if path.size() > 0:
@@ -25,3 +25,4 @@ func move_to_target():
 		
 func get_target_path(target_pos):
 	path = nav.get_simple_path(global_position, target_pos, false)
+
