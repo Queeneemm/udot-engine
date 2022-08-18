@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Tile/Tile.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Bullet.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Gun2.gd" type="Script" id=16]
 [ext_resource path="res://uk.jpg" type="Texture" id=17]
+[ext_resource path="res://icon.png" type="Texture" id=18]
 
 [sub_resource type="TileSet" id=38]
 0/name = "Stone.png 1"
@@ -449,6 +450,28 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="NavigationPolygon" id=125]
+vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 ) ]
+
+[sub_resource type="TileSet" id=126]
+0/name = "icon.png 0"
+0/texture = ExtResource( 18 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/navigation = SubResource( 125 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 10.5, 7.5 )
 
@@ -625,19 +648,17 @@ bake_navigation = true
 format = 1
 tile_data = PoolIntArray( -327691, 0, 0, -327690, 0, 1, -327689, 0, 1, -327688, 0, 1, -327687, 0, 1, -327686, 0, 2, -262157, 0, 0, -262156, 0, 2, -262149, 0, 0, -262148, 0, 1, -262147, 0, 1, -262146, 0, 1, -262145, 0, 1, -327680, 0, 1, -327679, 0, 2, -196623, 0, 0, -196622, 0, 2, -131088, 0, 0, -65554, 0, 0, -65553, 0, 2, -20, 0, 0, -19, 0, 2 )
 
+[node name="TestSperma" type="TileMap" parent="Navigation2D"]
+tile_set = SubResource( 126 )
+cell_size = Vector2( 32, 32 )
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 196629, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 196634, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 196638, 0, 0, 196639, 0, 0, 196640, 0, 0, 196641, 0, 0, 196642, 0, 0, 196643, 0, 0, 196644, 0, 0, 196645, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262171, 0, 0, 262172, 0, 0, 262173, 0, 0, 262174, 0, 0, 262175, 0, 0, 262176, 0, 0, 262177, 0, 0, 262178, 0, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 327708, 0, 0, 327709, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 327713, 0, 0, 327714, 0, 0, 327715, 0, 0, 327716, 0, 0, 327717, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 393243, 0, 0, 393244, 0, 0, 393245, 0, 0, 393246, 0, 0, 393247, 0, 0, 393248, 0, 0, 393249, 0, 0, 393250, 0, 0, 393251, 0, 0, 393252, 0, 0, 393253, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 458782, 0, 0, 458783, 0, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458787, 0, 0, 458788, 0, 0, 458789, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 524324, 0, 0, 524325, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 589859, 0, 0, 589860, 0, 0, 589861, 0, 0, 655381, 0, 0, 655382, 0, 0, 655383, 0, 0, 655384, 0, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 655388, 0, 0, 655389, 0, 0, 655390, 0, 0, 655391, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655395, 0, 0, 655396, 0, 0, 655397, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720925, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720931, 0, 0, 720932, 0, 0, 720933, 0, 0, 786453, 0, 0, 786454, 0, 0, 786455, 0, 0, 786456, 0, 0, 786457, 0, 0, 786458, 0, 0, 786459, 0, 0, 786460, 0, 0, 786461, 0, 0, 786462, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786467, 0, 0, 786468, 0, 0, 786469, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 851999, 0, 0, 852000, 0, 0, 852001, 0, 0, 852002, 0, 0, 852003, 0, 0, 852004, 0, 0, 852005, 0, 0 )
+
 [node name="World" type="StaticBody2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="World"]
-position = Vector2( 547, 182 )
-current = true
-zoom = Vector2( 1.1, 1.1 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World"]
-position = Vector2( 0, -4 )
-polygon = PoolVector2Array( 63, 97, 64, 288, 96, 289, 96, 320, 127, 320, 127, 352, 160, 352, 159, 381, 1025, 383, 1025, 320, 1056, 321, 1057, 225, 1024, 224, 1026, 130, 995, 128, 993, 0, 930, 1, 929, -33, 897, -32, 898, -65, 865, -65, 867, -96, 640, -96, 640, -131, 448, -130, 448, -96, 384, -97, 384, -65, 319, -65, 320, -32, 289, -33, 288, 0, 223, 0, 224, 33, 159, 32, 159, 64, 96, 64, 96, 95, 29, 95, 267, -141, 1077, -125, 1088, 497, 15, 463, 30, 116 )
-
 [node name="Boby" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( 297, 28 )
+position = Vector2( -123, 232 )
 script = ExtResource( 1 )
 speed = 200
 
@@ -646,12 +667,13 @@ position = Vector2( -2.5, 93 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boby"]
-position = Vector2( 0, 47 )
+position = Vector2( -1, 54 )
 frames = SubResource( 5 )
 speed_scale = 1.327
 playing = true
 
 [node name="Weapons" type="Node2D" parent="Boby"]
+position = Vector2( -4, 3 )
 
 [node name="Gun2" type="Node2D" parent="Boby/Weapons"]
 position = Vector2( 3, 58 )
@@ -683,10 +705,15 @@ position = Vector2( 2, 1 )
 [node name="Bullet" parent="Boby/Weapons/Gun" instance=ExtResource( 15 )]
 position = Vector2( -428, -63 )
 
+[node name="Camera2D" type="Camera2D" parent="Boby"]
+position = Vector2( 6, 53 )
+current = true
+zoom = Vector2( 1.1, 1.1 )
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy1" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 716, 92 )
+position = Vector2( -265, 38 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
