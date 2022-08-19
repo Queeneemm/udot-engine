@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Engine/bin/Game/Tile/Tile.png" type="Texture" id=2]
@@ -13,7 +13,10 @@
 [ext_resource path="res://Enemy1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Engine/bin/Game/Tile/Forest.png" type="Texture" id=12]
 [ext_resource path="res://Engine/bin/Game/Game.gd" type="Script" id=13]
+[ext_resource path="res://Engine/bin/Script/Weapons/Bullet2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Engine/bin/Script/Weapons/Bullet.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Engine/bin/Script/Weapons/Gun2.gd" type="Script" id=16]
+[ext_resource path="res://uk.jpg" type="Texture" id=17]
 [ext_resource path="res://Engine/bin/UI/UI.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Blob.tscn" type="PackedScene" id=19]
 
@@ -173,8 +176,8 @@ vertices = PoolVector2Array( -363, -198, -176, -195, 51, -168, 84, -135, 115, -1
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ), PoolIntArray( 3, 12, 4 ), PoolIntArray( 4, 13, 5 ), PoolIntArray( 5, 14, 6 ), PoolIntArray( 6, 15, 16, 7 ), PoolIntArray( 17, 18, 1, 0 ), PoolIntArray( 19, 20, 21 ), PoolIntArray( 10, 22, 23, 24, 19 ), PoolIntArray( 25, 26, 27, 24, 23, 28 ), PoolIntArray( 24, 29, 19 ), PoolIntArray( 11, 30, 0 ), PoolIntArray( 25, 31, 32, 26 ), PoolIntArray( 33, 34, 11 ), PoolIntArray( 21, 35, 33 ), PoolIntArray( 2, 36, 3 ), PoolIntArray( 1, 37, 2 ), PoolIntArray( 33, 11, 10, 21 ), PoolIntArray( 19, 21, 10 ) ]
 outlines = [ PoolVector2Array( 47, -196, -176, -195, -176, -229, -361, -229, -363, -198, -426, -197, -427, -165, -489, -165, -491, -133, -522, -132, -524, -102, -587, -101, -587, -70, -652, -69, -653, -37, -716, -37, -717, -8, -749, -5, -750, 177, -718, 179, -718, 208, -685, 213, -686, 242, -654, 244, -655, 274, 209, 272, 210, 209, 242, 208, 242, 121, 211, 121, 211, 24, 179, 24, 180, -104, 115, -103, 115, -136, 84, -135, 82, -166, 51, -168 ) ]
 
-[sub_resource type="CapsuleShape2D" id=127]
-radius = 13.0
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10.5, 7.25 )
 
 [sub_resource type="AtlasTexture" id=96]
 atlas = ExtResource( 9 )
@@ -295,8 +298,13 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 9.25, 27.0625 )
+[sub_resource type="SpriteFrames" id=124]
+animations = [ {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="SpriteFrames" id=37]
 animations = [ {
@@ -353,11 +361,9 @@ position = Vector2( 306, 90 )
 script = ExtResource( 1 )
 speed = 150
 
-[node name="Area2D" type="Area2D" parent="Boby"]
-position = Vector2( 3, 26 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boby/Area2D"]
-shape = SubResource( 127 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boby"]
+position = Vector2( 2, 52 )
+shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boby"]
 position = Vector2( 4, 28 )
@@ -366,12 +372,23 @@ frames = SubResource( 5 )
 speed_scale = 1.327
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boby"]
-position = Vector2( 1.75, 32.0625 )
-shape = SubResource( 6 )
-
 [node name="Weapons" type="Node2D" parent="Boby"]
 position = Vector2( -4, 6 )
+
+[node name="Gun2" type="Node2D" parent="Boby/Weapons"]
+position = Vector2( 10, 27 )
+script = ExtResource( 16 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Weapons/Gun2"]
+position = Vector2( 14, 0 )
+scale = Vector2( 0.0245002, 0.0228636 )
+frames = SubResource( 124 )
+
+[node name="BulletPoint" type="Node2D" parent="Boby/Weapons/Gun2"]
+position = Vector2( 1, 0 )
+
+[node name="Bullet2" parent="Boby/Weapons/Gun2" instance=ExtResource( 14 )]
+position = Vector2( 2803, 402 )
 
 [node name="Gun" type="Node2D" parent="Boby/Weapons"]
 position = Vector2( 10, 27 )
@@ -385,7 +402,7 @@ frames = SubResource( 37 )
 [node name="BulletPoint" type="Node2D" parent="Boby/Weapons/Gun"]
 position = Vector2( 14, -2 )
 
-[node name="Bullet" parent="Boby/Weapons/Gun" groups=["Bullet"] instance=ExtResource( 15 )]
+[node name="Bullet" parent="Boby/Weapons/Gun" instance=ExtResource( 15 )]
 position = Vector2( 2717, 400 )
 
 [node name="Camera2D" type="Camera2D" parent="Boby"]
@@ -399,7 +416,7 @@ margin_top = -208.0
 margin_right = -352.0
 margin_bottom = -208.0
 
-[node name="Enemies" type="Node" parent="." groups=["Enemy"]]
+[node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy1" parent="Enemies" instance=ExtResource( 11 )]
 position = Vector2( 804, 155 )
@@ -413,5 +430,4 @@ process_mode = 0
 wait_time = 0.1
 autostart = true
 
-[connection signal="body_entered" from="Boby/Area2D" to="Boby" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
