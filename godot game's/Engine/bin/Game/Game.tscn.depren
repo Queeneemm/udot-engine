@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Engine/bin/Game/Tile/Tile.png" type="Texture" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Engine/bin/Game/Char/Kult/Kult_2_Walk.png" type="Texture" id=8]
 [ext_resource path="res://Engine/bin/Game/Char/Kult/Kult_2_IDLe.png" type="Texture" id=9]
 [ext_resource path="res://Engine/bin/Game/Char/Kult/Kult_2_RAttack.png" type="Texture" id=10]
-[ext_resource path="res://Enemy1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Engine/bin/Script/Enemy/Enemy1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Engine/bin/Game/Tile/Forest.png" type="Texture" id=12]
 [ext_resource path="res://Engine/bin/Game/Game.gd" type="Script" id=13]
 [ext_resource path="res://Engine/bin/Script/Weapons/Bullet2.tscn" type="PackedScene" id=14]
@@ -18,7 +18,6 @@
 [ext_resource path="res://Engine/bin/Script/Weapons/Gun2.gd" type="Script" id=16]
 [ext_resource path="res://uk.jpg" type="Texture" id=17]
 [ext_resource path="res://Engine/bin/UI/UI.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Blob.tscn" type="PackedScene" id=19]
 
 [sub_resource type="TileSet" id=38]
 0/name = "Stone.png 1"
@@ -357,17 +356,16 @@ visible = false
 navpoly = SubResource( 126 )
 
 [node name="Boby" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( 306, 90 )
+position = Vector2( 295, 86 )
 script = ExtResource( 1 )
 speed = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boby"]
-position = Vector2( 2, 52 )
+position = Vector2( -2.5, 93.25 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boby"]
-position = Vector2( 4, 28 )
-scale = Vector2( 0.586207, 0.567888 )
+position = Vector2( -1, 51 )
 frames = SubResource( 5 )
 speed_scale = 1.327
 playing = true
@@ -376,11 +374,11 @@ playing = true
 position = Vector2( -4, 6 )
 
 [node name="Gun2" type="Node2D" parent="Boby/Weapons"]
-position = Vector2( 10, 27 )
+position = Vector2( 3, 58 )
 script = ExtResource( 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Weapons/Gun2"]
-position = Vector2( 14, 0 )
+position = Vector2( 15, 0 )
 scale = Vector2( 0.0245002, 0.0228636 )
 frames = SubResource( 124 )
 
@@ -391,43 +389,38 @@ position = Vector2( 1, 0 )
 position = Vector2( 2803, 402 )
 
 [node name="Gun" type="Node2D" parent="Boby/Weapons"]
-position = Vector2( 10, 27 )
+position = Vector2( 3, 58 )
 script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boby/Weapons/Gun"]
-position = Vector2( 13, 0 )
+position = Vector2( 12.8196, -1.83043 )
 scale = Vector2( 0.507518, 0.465399 )
 frames = SubResource( 37 )
 
 [node name="BulletPoint" type="Node2D" parent="Boby/Weapons/Gun"]
-position = Vector2( 14, -2 )
+position = Vector2( 2, 1 )
 
 [node name="Bullet" parent="Boby/Weapons/Gun" instance=ExtResource( 15 )]
 position = Vector2( 2717, 400 )
 
 [node name="Camera2D" type="Camera2D" parent="Boby"]
-position = Vector2( 0, 33 )
+position = Vector2( -8, 39 )
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.7, 0.7 )
 
 [node name="UI" parent="Boby/Camera2D" instance=ExtResource( 18 )]
-margin_left = -253.0
-margin_top = -144.0
-margin_right = -103.0
-margin_bottom = -144.0
+margin_left = -352.0
+margin_top = -208.0
+margin_right = -352.0
+margin_bottom = -208.0
 
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy1" parent="Enemies" instance=ExtResource( 11 )]
 position = Vector2( 804, 155 )
-speed = 180
-
-[node name="Blob" parent="Enemies" groups=["Enemy"] instance=ExtResource( 19 )]
-position = Vector2( 776, 150 )
+speed = 100
 
 [node name="Timer" type="Timer" parent="."]
-process_mode = 0
-wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
