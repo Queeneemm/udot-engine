@@ -51,7 +51,7 @@ local_coords = false
 texture = ExtResource( 3 )
 gravity = Vector2( -100, -100 )
 initial_velocity = 50.0
-angular_velocity = 317.07
+angular_velocity = 316.0
 scale_amount = 1.5
 scale_amount_random = 1.0
 
