@@ -13,12 +13,13 @@ margin_bottom = -60.0
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 anchor_left = 0.054
-anchor_top = 0.72
+anchor_top = 0.723
 anchor_right = 0.054
-anchor_bottom = 0.72
-margin_left = 0.704002
-margin_right = 38.704
-margin_bottom = 11.0
+anchor_bottom = 0.723
+margin_left = -1.296
+margin_top = -5.80002
+margin_right = 36.704
+margin_bottom = 8.19998
 rect_scale = Vector2( 2.84, 2.84 )
 rect_pivot_offset = Vector2( -0.813344, 0.1091 )
 step = 10.0
