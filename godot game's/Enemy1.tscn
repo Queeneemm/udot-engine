@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Engine/bin/Game/Char/Fire/FireAnim.png" type="Texture" id=1]
+[ext_resource path="res://Engine/bin/Script/Enemy/Enemy1.gd" type="Script" id=2]
+[ext_resource path="res://Engine/bin/Game/Char/Fire/Firepart.png" type="Texture" id=3]
+[ext_resource path="res://Enemy1DMG.gd" type="Script" id=4]
+
+[sub_resource type="Curve" id=9]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 346.909 ), 201.202, 0.0, 0, 0 ]
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Walk"
+length = 0.774
+loop = true
+step = 1.185
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.14, 0.25, 0.415, 0.544 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 9.05539
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 33.0
+
+[node name="Enemy1" type="KinematicBody2D" groups=["Enemy"]]
+position = Vector2( 7, -1 )
+script = ExtResource( 2 )
+speed = 372
+
+[node name="Particles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 1, 17 )
+amount = 25
+lifetime = 5.0
+speed_scale = 0.5
+texture = ExtResource( 3 )
+gravity = Vector2( 100, -100 )
+initial_velocity = 100.0
+angular_velocity = 45.0
+radial_accel = 100.0
+angle = 45.0
+angle_curve = SubResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2, 12 )
+texture = ExtResource( 1 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Walk"
+anims/RESET = SubResource( 7 )
+anims/Walk = SubResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 17 )
+shape = SubResource( 10 )
+
+[node name="Enemy1DMG" type="RigidBody2D" parent="."]
+position = Vector2( 1, 17 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1DMG"]
+shape = SubResource( 11 )
+
+[connection signal="body_entered" from="Enemy1DMG" to="Enemy1DMG" method="_on_Enemy1DMG_body_entered"]
