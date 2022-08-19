@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Road.png-7a6d8f054d36e05e0a40d0c29993d5d9.stex"
+path="res://.import/Kult_2.png-cfc8dd4d6e1c4e85e42ef7fe13b3d195.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile/Road.png"
-dest_files=[ "res://.import/Road.png-7a6d8f054d36e05e0a40d0c29993d5d9.stex" ]
+source_file="res://Engine/bin/Game/Char/Kult/Kult_2.png"
+dest_files=[ "res://.import/Kult_2.png-cfc8dd4d6e1c4e85e42ef7fe13b3d195.stex" ]
 
 [params]
 

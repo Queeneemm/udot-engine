@@ -3,7 +3,7 @@ extends Node2D
 export var bullet_speed = 1000
 export var fire_rate = 0.2
 
-var bullet = preload("res://Bullet2.tscn")
+var bullet = load("res://Engine/bin/Script/Weapons/Bullet.tscn")
 var can_fire = true
 
 func _process(delta):
@@ -21,3 +21,5 @@ func _process(delta):
 		
 func _ready():
 	pass # Replace with function body.
+
+

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kult_2_Bone.png-1ec0859de26a43f19953000593f8ebee.stex"
+path="res://.import/Proj.png-e69d2e4b02c5922e1f39a60ea0b50aec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char/Kult/Kult_2_Bone.png"
-dest_files=[ "res://.import/Kult_2_Bone.png-1ec0859de26a43f19953000593f8ebee.stex" ]
+source_file="res://Engine/bin/Game/Char/Kult/Proj.png"
+dest_files=[ "res://.import/Proj.png-e69d2e4b02c5922e1f39a60ea0b50aec.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

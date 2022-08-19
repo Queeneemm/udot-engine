@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone.png-562fce6ceb841386a9946e216990987c.stex"
+path="res://.import/Firepart.png-5cd6ded40826429ed9ff9dc1e4cbc3cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile/Stone.png"
-dest_files=[ "res://.import/Stone.png-562fce6ceb841386a9946e216990987c.stex" ]
+source_file="res://Engine/bin/Game/Char/Fire/Firepart.png"
+dest_files=[ "res://.import/Firepart.png-5cd6ded40826429ed9ff9dc1e4cbc3cf.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blob.png-c0113b8f271c0fb186ae518431047dcb.stex"
+path="res://.import/Golem.png-99e4d08514ef47253fc772cefcd7b890.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char/Blob/Blob.png"
-dest_files=[ "res://.import/Blob.png-c0113b8f271c0fb186ae518431047dcb.stex" ]
+source_file="res://Engine/bin/Game/Char/Golem.png"
+dest_files=[ "res://.import/Golem.png-99e4d08514ef47253fc772cefcd7b890.stex" ]
 
 [params]
 

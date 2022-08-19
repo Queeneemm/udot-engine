@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Golem.png-2bb75e50f55ab8e44def4f74194ca7ff.stex"
+path="res://.import/Forest.png-10af13f7067346f6668ca4da68969576.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char/Golem.png"
-dest_files=[ "res://.import/Golem.png-2bb75e50f55ab8e44def4f74194ca7ff.stex" ]
+source_file="res://Engine/bin/Game/Tile/Forest.png"
+dest_files=[ "res://.import/Forest.png-10af13f7067346f6668ca4da68969576.stex" ]
 
 [params]
 

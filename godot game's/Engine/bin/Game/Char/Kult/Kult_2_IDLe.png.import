@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tile.png-242ce5e9d4a60ecf3bc38a48649695d2.stex"
+path="res://.import/Kult_2_IDLe.png-5eef9b9d7f0c13a8144511db7145ac20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char/Fire/Tile.png"
-dest_files=[ "res://.import/Tile.png-242ce5e9d4a60ecf3bc38a48649695d2.stex" ]
+source_file="res://Engine/bin/Game/Char/Kult/Kult_2_IDLe.png"
+dest_files=[ "res://.import/Kult_2_IDLe.png-5eef9b9d7f0c13a8144511db7145ac20.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

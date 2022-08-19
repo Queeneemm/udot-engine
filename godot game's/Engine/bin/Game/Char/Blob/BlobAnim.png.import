@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BlobAnim.png-6140f264e0ad0845c8e9d70e94b9f1df.stex"
+path="res://.import/BlobAnim.png-6d933b1f75c379f8564822efef86738b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char/Blob/BlobAnim.png"
-dest_files=[ "res://.import/BlobAnim.png-6140f264e0ad0845c8e9d70e94b9f1df.stex" ]
+source_file="res://Engine/bin/Game/Char/Blob/BlobAnim.png"
+dest_files=[ "res://.import/BlobAnim.png-6d933b1f75c379f8564822efef86738b.stex" ]
 
 [params]
 

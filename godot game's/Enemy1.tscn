@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Char/Fire/FireAnim.png" type="Texture" id=1]
-[ext_resource path="res://Enemy1.gd" type="Script" id=2]
-[ext_resource path="res://Char/Fire/Firepart.png" type="Texture" id=3]
+[ext_resource path="res://Engine/bin/Game/Char/Fire/FireAnim.png" type="Texture" id=1]
+[ext_resource path="res://Engine/bin/Script/Enemy/Enemy1.gd" type="Script" id=2]
+[ext_resource path="res://Engine/bin/Game/Char/Fire/Firepart.png" type="Texture" id=3]
 
 [sub_resource type="Curve" id=9]
 min_value = -360.0
