@@ -422,7 +422,7 @@ margin_bottom = -208.0
 position = Vector2( 804, 155 )
 speed = 180
 
-[node name="Blob" parent="Enemies" instance=ExtResource( 19 )]
+[node name="Blob" parent="Enemies" groups=["Enemy"] instance=ExtResource( 19 )]
 position = Vector2( 776, 150 )
 
 [node name="Timer" type="Timer" parent="."]
