@@ -3,7 +3,8 @@ var health
 var direction: Vector2 = Vector2.ZERO
 export var speed: = 100
 func _ready():
-
+	$AnimatedSprite.play("IDLe")
+	
 	pass
 
 func _physics_process(delta):
@@ -12,4 +13,5 @@ func _physics_process(delta):
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		)).normalized()
 	move_and_slide(direction * speed)
-
+		
+		
