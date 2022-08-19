@@ -2,7 +2,7 @@ extends KinematicBody2D
 var hp = 100
 var current_hp
 var direction: Vector2 = Vector2.ZERO
-var damage = 25
+var damage = 100
 export var speed: = 100
 
 func _ready():
@@ -22,5 +22,3 @@ func _on_Area2D_body_entered(body):
 		if current_hp <= 0:
 			self.hide()
 			
-func hp_bar():
-	$TextureProgress.value = current_hp
