@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=2]
 =======
 [gd_scene load_steps=9 format=2]
 >>>>>>> 64a46a34af22ba1117a9866195dc4c8da0e59456
+=======
+[gd_scene load_steps=8 format=2]
+>>>>>>> parent of a82be36 (the game)
 
 [ext_resource path="res://Engine/bin/Game/Char/Fire/FireAnim.png" type="Texture" id=1]
 [ext_resource path="res://Engine/bin/Script/Enemy/Enemy1.gd" type="Script" id=2]
 [ext_resource path="res://Engine/bin/Game/Char/Fire/Firepart.png" type="Texture" id=3]
-[ext_resource path="res://Enemy1DMG.gd" type="Script" id=4]
 
 [sub_resource type="Curve" id=11]
 min_value = -360.0
@@ -53,10 +56,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 9.05539
-
-[sub_resource type="CircleShape2D" id=11]
-radius = 33.0
 
 [node name="Enemy1" type="KinematicBody2D" groups=["Enemy"]]
 position = Vector2( 7, -1 )
@@ -96,17 +95,12 @@ anims/Walk = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 <<<<<<< HEAD
+<<<<<<< HEAD
 position = Vector2( 1, 17 )
 =======
 position = Vector2( -2, 22 )
 >>>>>>> 64a46a34af22ba1117a9866195dc4c8da0e59456
+=======
+position = Vector2( 0, 17 )
+>>>>>>> parent of a82be36 (the game)
 shape = SubResource( 10 )
-
-[node name="Enemy1DMG" type="RigidBody2D" parent="."]
-position = Vector2( 1, 17 )
-script = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1DMG"]
-shape = SubResource( 11 )
-
-[connection signal="body_entered" from="Enemy1DMG" to="Enemy1DMG" method="_on_Enemy1DMG_body_entered"]
