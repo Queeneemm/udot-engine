@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var max_hp = 100
+var current_hp
 export var speed = 100
 var velocity = Vector2.ZERO
 var path = []
@@ -9,6 +11,7 @@ var nav = null
 func _ready():
 	yield(owner, "ready")
 	nav = owner.nav
+	current_hp = max_hp
 	$AnimationPlayer.play()
 	
 func _physics_process(delta):
@@ -25,4 +28,11 @@ func move_to_target():
 		
 func get_target_path(target_pos):
 	path = nav.get_simple_path(global_position, target_pos, false)
+
+func OnHit(damage):
+	print("mne pizda")
+	current_hp -= damage
+	if current_hp <= 0:
+		queue_free()
+		self.hide()
 

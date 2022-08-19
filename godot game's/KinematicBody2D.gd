@@ -1,10 +1,11 @@
 extends KinematicBody2D
-var health
+var hp = 100
+var current_hp
 var direction: Vector2 = Vector2.ZERO
+var damage = 100
 export var speed: = 100
 func _ready():
-	$AnimatedSprite.play("IDLe")
-	
+	current_hp = hp
 	pass
 
 func _physics_process(delta):
@@ -14,4 +15,11 @@ func _physics_process(delta):
 		)).normalized()
 	move_and_slide(direction * speed)
 		
-		
+
+
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("Enemy"):
+		current_hp -= damage
+		if current_hp <= 0:
+			queue_free()
+			self.hide()
