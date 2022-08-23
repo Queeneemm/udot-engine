@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Engine/bin/Game/Tile/Tile.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Enemy1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Engine/bin/Game/Tile/Forest.png" type="Texture" id=12]
 [ext_resource path="res://Engine/bin/Game/Game.gd" type="Script" id=13]
+[ext_resource path="res://BlobBlade.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Engine/bin/Script/Weapons/Bullet.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Engine/bin/UI/UI.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Blob.tscn" type="PackedScene" id=19]
@@ -406,7 +407,10 @@ position = Vector2( 804, 155 )
 speed = 180
 
 [node name="Blob" parent="Enemies" groups=["Enemy"] instance=ExtResource( 19 )]
-position = Vector2( 776, 150 )
+position = Vector2( 736, 153 )
+
+[node name="BlobBlade" parent="Enemies/Blob" instance=ExtResource( 14 )]
+position = Vector2( 17, 5 )
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
