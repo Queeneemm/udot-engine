@@ -2,7 +2,7 @@ extends KinematicBody2D
 var hp = 100
 var current_hp
 var direction: Vector2 = Vector2.ZERO
-var damage = 100
+var damage = 25
 export var speed: = 100
 
 func _ready():
@@ -19,6 +19,10 @@ func _physics_process(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Enemy"):
 		current_hp -= damage
+		$HP_Bar.value(current_hp)
 		if current_hp <= 0:
 			self.hide()
 			
+			
+
+

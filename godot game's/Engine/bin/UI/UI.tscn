@@ -2,19 +2,20 @@
 
 [ext_resource path="res://Engine/bin/UI/EmptyHp.png" type="Texture" id=1]
 [ext_resource path="res://Engine/bin/UI/BlueHp.png" type="Texture" id=2]
-[ext_resource path="res://Engine/bin/UI/HP_Bar.gd" type="Script" id=3]
+[ext_resource path="res://Engine/bin/UI/UI.gd" type="Script" id=3]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 
 [node name="HP_Bar" type="TextureProgress" parent="."]
-margin_left = 1.0
-margin_right = 39.0
-margin_bottom = 11.0
+margin_left = 13.0
+margin_top = 9.0
+margin_right = 51.0
+margin_bottom = 20.0
 rect_scale = Vector2( 1.44, 1.44 )
 value = 100.0
 texture_under = ExtResource( 1 )
 texture_over = ExtResource( 1 )
 texture_progress = ExtResource( 2 )
-script = ExtResource( 3 )
