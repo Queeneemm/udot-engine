@@ -410,7 +410,7 @@ speed = 180
 position = Vector2( 736, 153 )
 
 [node name="BlobBlade" parent="Enemies/Blob" instance=ExtResource( 14 )]
-position = Vector2( 17, 5 )
+position = Vector2( 18, 5 )
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 0
