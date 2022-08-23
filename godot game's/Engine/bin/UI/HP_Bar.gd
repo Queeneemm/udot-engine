@@ -1,5 +1,9 @@
 extends TextureProgress
 
-func _ready():
-	pass # Replace with function body.
 
+func _ready():
+	
+	pass
+
+func HP_bar(current_hp):
+	value = current_hp
