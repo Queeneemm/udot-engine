@@ -243,13 +243,13 @@ region = Rect2( 672, 0, 84, 103 )
 atlas = ExtResource( 8 )
 region = Rect2( 10, 0, 72, 98 )
 
-[sub_resource type="AtlasTexture" id=103]
-atlas = ExtResource( 8 )
-region = Rect2( 82, 0, 72, 98 )
-
 [sub_resource type="AtlasTexture" id=104]
 atlas = ExtResource( 8 )
 region = Rect2( 154, 0, 72, 98 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 8 )
+region = Rect2( 82, 0, 72, 98 )
 
 [sub_resource type="AtlasTexture" id=105]
 atlas = ExtResource( 8 )
@@ -287,7 +287,7 @@ animations = [ {
 "name": "Set_Pent",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ) ],
+"frames": [ SubResource( 102 ), SubResource( 104 ), SubResource( 103 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 7.0
@@ -367,7 +367,7 @@ shape = SubResource( 6 )
 position = Vector2( 5, 28 )
 scale = Vector2( 0.586207, 0.567888 )
 frames = SubResource( 5 )
-speed_scale = 1.327
+speed_scale = 2.19
 playing = true
 
 [node name="Weapons" type="Node2D" parent="Boby"]
