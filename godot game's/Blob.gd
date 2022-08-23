@@ -11,7 +11,7 @@ func _ready():
 	yield(owner, "ready")
 	nav = owner.nav
 	current_hp = max_hp
-	$AnimationPlayer.play("Walk")
+	$AnimatedSprite.play("Walk")
 	
 func _physics_process(delta):
 	if path.size() > 0:
