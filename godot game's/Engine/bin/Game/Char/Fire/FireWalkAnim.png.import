@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FireAnim.png-c9a02735a71710775590585fff6986a8.stex"
+path="res://.import/FireWalkAnim.png-efd82afa7dda69e03cf343b4e9623302.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Engine/bin/Game/Char/Fire/FireAnim.png"
-dest_files=[ "res://.import/FireAnim.png-c9a02735a71710775590585fff6986a8.stex" ]
+source_file="res://Engine/bin/Game/Char/Fire/FireWalkAnim.png"
+dest_files=[ "res://.import/FireWalkAnim.png-efd82afa7dda69e03cf343b4e9623302.stex" ]
 
 [params]
 

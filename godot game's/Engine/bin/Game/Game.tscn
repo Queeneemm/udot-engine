@@ -402,7 +402,7 @@ margin_bottom = -142.0
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Enemy1" parent="Enemies" instance=ExtResource( 11 )]
+[node name="Fire" parent="Enemies" instance=ExtResource( 11 )]
 position = Vector2( 804, 155 )
 speed = 180
 
